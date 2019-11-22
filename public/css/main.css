@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(45, 63,82, .8); 
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+#username {
+    
+    padding: 10px 15px;
+    font-size: 400%;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #34495e;
+    width: 740px;
+    text-align: center;
+}
+
+#joinBtn{
+    
+    width: 740px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 300%;
+}
+
+ #contenedor{
+    display:none;
+} 
+
+.row #chatGeneral{
+    height:500px;
+}
+
+#campoUsers{
+    height: 250px;
+    
+
+}
+
+#campoChats{
+    height: 250px;
+    
+}
+
+#campoChatsHead{
+   display:flex;
+    
+}
+
+
+.card-body,.modal-body,.card-body{
+    overflow: auto;
+}
+
+#campoUsersPanelCreacion{
+  
+
+   height: 300px;
+   font-size: 24px;
+   overflow: auto;
+
+}
+
+#cb {
+    margin-left: 25px;
+    width: 24px;
+    height: 24px;
+
+}
+
+#nameGroup{
+    margin-left: 25px;
+}
+
+#divGroup,#divUserConectados{
+    
+        border-bottom-style: ridge;
+        border-bottom-color: coral;
+        border-bottom-width: 1px;
+     
+}

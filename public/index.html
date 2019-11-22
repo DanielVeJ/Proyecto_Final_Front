@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    
+    <input id="username" type="text" placeholder="username">
+    <button id="joinBtn"  >Connect</button>
+
+     <div class="container" id="contenedor">
+        <div class="row mt-2">
+                <div class="col-md-6" >
+                        <div class="card" id="chatGeneral">
+                          <div class="card-header">
+                             <h4 id="icon_general"><img src="../src/icon_salaGeneral.png" alt="Smiley face" height="42" width="55"><span>Chat General</span></h4>
+                          </div>
+            
+                         <div id="chat" class="card-body"></div>
+            
+                         <form id="mensajeform" class="card-footer">
+                             <div class="input-group">
+                             <input type="text" id="mensaje" class="form-control">
+                            <div class="input-group-append">
+                             <button type="submit"  class="btn btn-warning">enviar</button>
+                            </div>
+                            </div>
+                         </form>
+                        </div> 
+                    </div>  
+                    
+                   <div class="col-md-3"> 
+                        
+                        <div class="col align-sef-start " >
+                                <div class="card " id="campoUsers">
+                                        <div class="card-header">
+                                            <h3>Usuarios</h3>
+                                        </div>
+                                        <div class="card-body">
+                                           <div id="usernames"></div>
+                                        </div>
+                                </div> 
+                           </div>
+        
+                           <div class="col">
+                               <div class="card" id="campoChats">
+                                       <div class="card-header" id="campoChatsHead">
+                                           <h3>chats</h3>
+                                           <a href="#ventanaOpciones" class="btn btn-md ml-5" data-toggle="modal"><img src="/src/icon_opciones.png" width="25px" height="25px" alt="opciones"></a>
+                                           
+                                           <!-- primera ventana emergent -->
+                                           <div class="modal fade" id="ventanaOpciones">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <!-- header de la ventana -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Selecciona usuarios para crear Chat.</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    </div>
+
+                                                    <!-- contenido usuarios disponibles -->
+                                                    <div class="modal-body" id="campoUsersPanelCreacion" >
+                                                       
+                                                    </div>
+
+                                                    <!-- footer con boton aceptar -->
+                                                     <div class="modal-footer">
+                                                         <input type="text" id="nombreGrupo" class="form-control" placeholder="Escribe el nombre del chat">
+                                                         <button id="btnAceptar" type="button" class="btn btn-primary" data-dismiss="modal">ACEPTAR</button>
+                                                     </div>
+
+                                                </div>
+                                            </div>
+                                           </div>
+
+                                            
+                                           <!------------------------------ -->
+                                       
+                                       
+                                        </div>
+                                       <div class="card-body">
+                                          <div id="chats"></div>
+                                       </div>
+                               </div> 
+                            </div>
+                       
+                   </div>
+        </div>
+    </div> 
+       
+    
+
+
+
+    <!-- bootstrap Js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+  
+</body>
+</html>
